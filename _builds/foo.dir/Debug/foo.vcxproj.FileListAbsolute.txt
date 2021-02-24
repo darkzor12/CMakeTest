@@ -1,0 +1,2 @@
+C:\Users\bandr\OneDrive\Desktop\cmake\_builds\Debug\foo.pdb
+C:\Users\bandr\OneDrive\Desktop\cmake\_builds\foo.dir\Debug\foo.pdb

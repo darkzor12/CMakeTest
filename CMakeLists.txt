@@ -1,7 +1,23 @@
-cmake_minimum_required(VERSION 3.20.0)
+cmake_minimum_required(VERSION 3.20)
 
-project(hello_world)
+message("Before 'project':")
+message("  C: '${CMAKE_C_COMPILER}'")
+message("  C++: '${CMAKE_CXX_COMPILER}'")
 
-add_executable(app main.cpp)
+project(foo)
 
-message("Processing CMakeList.txt")
+message("After 'project':")
+message("  C: '${CMAKE_C_COMPILER}'")
+message("  C++: '${CMAKE_CXX_COMPILER}'")
+
+#if(POLICY CMP0038)
+  # Policy CMP0038 introduced since CMake 3.0 so if we want to be compatible
+  # with 2.8 (see cmake_minimum_required) we should put 'cmake_policy' under
+  # condition.
+  #cmake_policy(SET CMP0038 OLD)
+#endif()
+
+add_library(foo main.cpp)
+
+message("Processing CMakeList")
+message("Continue processing")

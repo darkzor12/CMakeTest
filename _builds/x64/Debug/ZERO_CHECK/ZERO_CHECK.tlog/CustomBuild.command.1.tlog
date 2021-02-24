@@ -1,0 +1,10 @@
+^C:\USERS\BANDR\ONEDRIVE\DESKTOP\CMAKE\_BUILDS\CMAKEFILES\55F4C87BDA63DAEC3F67CD68918F9F15\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/bandr/OneDrive/Desktop/cmake -BC:/Users/bandr/OneDrive/Desktop/cmake/_builds --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/bandr/OneDrive/Desktop/cmake/_builds/foo.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
